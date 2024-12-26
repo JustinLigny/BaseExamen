@@ -11,7 +11,7 @@ import lombok.EqualsAndHashCode;
 @Table(name = "users")
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class User extends DbEntity {
+public class DbUser extends DbEntity {
 
     @Column(length = 50, nullable = false)
     private String firstName;

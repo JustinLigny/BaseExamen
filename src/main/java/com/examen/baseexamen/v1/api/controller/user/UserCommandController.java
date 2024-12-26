@@ -1,8 +1,8 @@
 package com.examen.baseexamen.v1.api.controller.user;
 
-import com.examen.baseexamen.v1.application.core.user.UserCommandProcessor;
-import com.examen.baseexamen.v1.application.core.user.commands.UserCreateCommand;
-import com.examen.baseexamen.v1.application.core.user.commands.UserCreateOutput;
+import com.examen.baseexamen.v1.application.core.user.commands.UserCommandProcessor;
+import com.examen.baseexamen.v1.application.core.user.commands.create.UserCreateCommand;
+import com.examen.baseexamen.v1.application.core.user.commands.create.UserCreateOutput;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

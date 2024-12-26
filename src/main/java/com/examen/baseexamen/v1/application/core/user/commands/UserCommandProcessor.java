@@ -1,7 +1,7 @@
-package com.examen.baseexamen.v1.application.core.user;
+package com.examen.baseexamen.v1.application.core.user.commands;
 
-import com.examen.baseexamen.v1.application.core.user.commands.UserCreateCommand;
-import com.examen.baseexamen.v1.application.core.user.commands.UserCreateOutput;
+import com.examen.baseexamen.v1.application.core.user.commands.create.UserCreateCommand;
+import com.examen.baseexamen.v1.application.core.user.commands.create.UserCreateOutput;
 import com.examen.baseexamen.v1.application.shared.cqrs.interfaces.ICommandHandler;
 import org.springframework.stereotype.Service;
 

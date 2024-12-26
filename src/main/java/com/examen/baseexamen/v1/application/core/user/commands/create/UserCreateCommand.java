@@ -1,4 +1,4 @@
-package com.examen.baseexamen.v1.application.core.user.commands;
+package com.examen.baseexamen.v1.application.core.user.commands.create;
 
 import com.examen.baseexamen.v1.application.shared.cqrs.commands.EntityCommand;
 
