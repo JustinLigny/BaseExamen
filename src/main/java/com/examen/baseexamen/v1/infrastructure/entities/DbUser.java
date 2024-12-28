@@ -1,6 +1,6 @@
 package com.examen.baseexamen.v1.infrastructure.entities;
 
-import com.examen.baseexamen.v1.application.shared.cqrs.entities.DbEntity;
+import com.examen.baseexamen.v1.application.shared.cqrscore.entities.DbEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;

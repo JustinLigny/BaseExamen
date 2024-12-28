@@ -1,6 +1,6 @@
 package com.examen.baseexamen.v1.application.core.user.commands.create;
 
-import com.examen.baseexamen.v1.application.shared.cqrs.commands.EntityCommand;
+import com.examen.baseexamen.v1.application.shared.cqrscore.commands.EntityCommand;
 
 public class UserCreateCommand extends EntityCommand {
     public String firstName;

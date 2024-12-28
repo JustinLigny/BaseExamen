@@ -1,9 +1,7 @@
 package com.examen.baseexamen.v1.application.shared.exception;
 
-import com.examen.baseexamen.v1.application.shared.cqrs.exceptions.EntityAlreadyExistsException;
-import com.examen.baseexamen.v1.application.shared.cqrs.exceptions.EntityNotFoundException;
-import com.examen.baseexamen.v1.application.shared.cqrs.exceptions.IllegalArgumentException;
-import com.examen.baseexamen.v1.application.shared.cqrs.exceptions.PaginationOutOfBoundsException;
+import com.examen.baseexamen.v1.application.shared.cqrscore.exceptions.*;
+import com.examen.baseexamen.v1.application.shared.cqrscore.exceptions.IllegalArgumentException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -48,6 +46,17 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(PaginationOutOfBoundsException.class)
     public ResponseEntity<ErrorResponse> handlePaginationOutOfBoundsException (PaginationOutOfBoundsException exception, WebRequest request) {
+        ErrorResponse errorResponse = new ErrorResponse(
+                HttpStatus.BAD_REQUEST.value(),
+                HttpStatus.BAD_REQUEST.getReasonPhrase(),
+                exception.getMessage(),
+                request.getDescription(false).substring(4)
+        );
+        return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(PaginationInvalidException.class)
+    public ResponseEntity<ErrorResponse> handlePaginationInvalidException (PaginationInvalidException exception, WebRequest request) {
         ErrorResponse errorResponse = new ErrorResponse(
                 HttpStatus.BAD_REQUEST.value(),
                 HttpStatus.BAD_REQUEST.getReasonPhrase(),

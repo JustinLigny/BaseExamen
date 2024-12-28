@@ -1,7 +1,7 @@
 package com.examen.baseexamen.v1.domain;
 
-import com.examen.baseexamen.v1.application.shared.cqrs.domain.Entity;
-import com.examen.baseexamen.v1.application.shared.cqrs.exceptions.IllegalArgumentException;
+import com.examen.baseexamen.v1.application.shared.cqrscore.domain.Entity;
+import com.examen.baseexamen.v1.application.shared.cqrscore.exceptions.IllegalArgumentException;
 import io.micrometer.common.util.StringUtils;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

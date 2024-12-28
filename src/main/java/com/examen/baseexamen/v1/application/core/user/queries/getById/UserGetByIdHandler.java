@@ -1,6 +1,6 @@
 package com.examen.baseexamen.v1.application.core.user.queries.getById;
 
-import com.examen.baseexamen.v1.application.shared.cqrs.handlers.queries.GenericGetByIdHandler;
+import com.examen.baseexamen.v1.application.shared.cqrscore.handlers.queries.GenericGetByIdHandler;
 import com.examen.baseexamen.v1.infrastructure.entities.DbUser;
 import com.examen.baseexamen.v1.infrastructure.repositories.IUserRepository;
 import org.modelmapper.ModelMapper;

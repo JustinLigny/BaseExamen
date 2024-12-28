@@ -1,8 +1,8 @@
 package com.examen.baseexamen.v1.application.core.user.commands.create;
 
-import com.examen.baseexamen.v1.application.shared.cqrs.handlers.commands.GenericCreateHandler;
-import com.examen.baseexamen.v1.application.shared.cqrs.interfaces.IEntityRepository;
-import com.examen.baseexamen.v1.application.shared.cqrs.interfaces.IValidator;
+import com.examen.baseexamen.v1.application.shared.cqrscore.handlers.commands.GenericCreateHandler;
+import com.examen.baseexamen.v1.application.shared.cqrscore.interfaces.IEntityRepository;
+import com.examen.baseexamen.v1.application.shared.cqrscore.interfaces.IValidator;
 import com.examen.baseexamen.v1.domain.User;
 import com.examen.baseexamen.v1.infrastructure.entities.DbUser;
 import org.modelmapper.ModelMapper;
