@@ -33,3 +33,7 @@ This project is a basic example for setting up a CRUD (Create, Read, Update, Del
     ```sh
     mvn clean install
     ```
+
+# License
+
+This project is licensed under a modified MIT License. You are free to use, modify, and redistribute this code, even for commercial purposes, as long as the `@author Justin Ligny` tags remain intact and my name is included in the license.
