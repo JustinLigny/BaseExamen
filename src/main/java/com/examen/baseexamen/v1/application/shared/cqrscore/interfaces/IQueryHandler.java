@@ -14,6 +14,7 @@ package com.examen.baseexamen.v1.application.shared.cqrscore.interfaces;
  *  @param <I> The input type (query).
  *  @param <O> The output type (response).
  *
+ *  @author Justin Ligny
  *  @since 1.0.1
  */
 public interface IQueryHandler<I, O> {

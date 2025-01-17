@@ -8,6 +8,7 @@ package com.examen.baseexamen.v1.application.shared.cqrscore.queries;
  *
  * <p>This class is typically used to fetch a list of entities with specific pagination parameters.</p><br>
  *
+ * @author Justin Ligny
  * @since 1.0.0
  */
 public class EntityGetAllQuery {

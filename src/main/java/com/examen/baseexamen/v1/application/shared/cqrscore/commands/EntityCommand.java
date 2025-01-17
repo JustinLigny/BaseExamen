@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  * as the base class for various command classes, such as those for creating, updating,
  * or deleting entities.</p><br>
  *
+ * @author Justin Ligny
  * @since 1.0.0
  */
 public class EntityCommand {

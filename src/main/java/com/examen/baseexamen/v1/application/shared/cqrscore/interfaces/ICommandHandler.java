@@ -13,6 +13,7 @@ package com.examen.baseexamen.v1.application.shared.cqrscore.interfaces;
  * @param <I> The input type (command).
  * @param <O> The output type (response).
  *
+ * @author Justin Ligny
  * @since 1.0.0
  */
 public interface ICommandHandler<I, O> {

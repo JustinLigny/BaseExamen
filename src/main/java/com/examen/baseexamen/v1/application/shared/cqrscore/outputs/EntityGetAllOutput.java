@@ -16,6 +16,9 @@ import java.util.List;
  * It provides methods for adding entities to the list, typically used in paginated responses.</p><br>
  *
  * @param <TDbEntity> the type of entity that extends {@link EntityOutput}.
+ *
+ *
+ * @author Justin Ligny
  * @since 1.0.0
  */
 @Data

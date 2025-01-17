@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  * <p>This class extends the concept of {@code EntityCommand} but is intended
  * specifically for query operations.</p><br>
  *
+ * @author Justin Ligny
  * @since 1.0.0
  */
 public class EntityQuery {

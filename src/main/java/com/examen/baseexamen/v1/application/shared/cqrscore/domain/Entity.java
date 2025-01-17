@@ -9,6 +9,7 @@ package com.examen.baseexamen.v1.application.shared.cqrscore.domain;
  * <p>This class does not contain any properties or methods itself but is used to establish
  * a base type for domain entities, ensuring consistent structure across various entity types.</p><br>
  *
+ * @author Justin Ligny
  * @since 1.0.0
  */
 public abstract class Entity {

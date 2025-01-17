@@ -12,6 +12,7 @@ import java.sql.Timestamp;
  * and timestamps for creation and last update. It is meant to be extended or used as
  * part of the output in various handler responses.</p><br>
  *
+ * @author Justin Ligny
  * @since 1.0.0
  */
 public class EntityOutput {
