@@ -73,7 +73,7 @@ public abstract class GenericDeleteHandler<
         TDbEntity entityDatabase = repository.findById(input.id)
                 .orElseThrow(() -> new EntityNotFoundException("Entity not found with ID " + input.id));
 
-        beforeEntityDelete(entityDatabase);
+        beforeEntityDelete(input, entityDatabase);
 
         repository.delete(entityDatabase);
     }
@@ -84,9 +84,10 @@ public abstract class GenericDeleteHandler<
      * <p>This method can be overridden by subclasses to implement logic
      * before the entity is deleted from the database.</p>
      *
+     * @param input The command input to be processed.
      * @param entityDatabase The entity to be deleted.
      *
      * @since 1.0.1
      */
-    public void beforeEntityDelete(TDbEntity entityDatabase){}
+    public void beforeEntityDelete(TCommand input, TDbEntity entityDatabase){}
 }

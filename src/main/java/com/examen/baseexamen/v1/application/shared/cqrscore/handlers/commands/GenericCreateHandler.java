@@ -114,15 +114,15 @@ public abstract class GenericCreateHandler<
 
         TDomain entityDomain = modelMapper.map(input, domainClass);
 
-        afterDomainCreation(entityDomain);
+        afterDomainCreation(input, entityDomain);
 
         TDbEntity entityDatabase = modelMapper.map(entityDomain, dbEntityClass);
 
-        beforeEntitySave(entityDatabase);
+        beforeEntitySave(input, entityDatabase);
 
         TDbEntity entityDatabaseCreated = repository.save(entityDatabase);
 
-        afterEntitySave(entityDatabaseCreated);
+        afterEntitySave(input, entityDatabaseCreated);
 
         return modelMapper.map(entityDatabaseCreated, outputClass);
     }
@@ -145,11 +145,12 @@ public abstract class GenericCreateHandler<
      * <p>This method can be overridden by subclasses to implement logic
      * after the domain entity is created.</p>
      *
+     * @param input The command input to be processed.
      * @param entityDomain The created domain entity.
      *
      * @since 1.0.1
      */
-    public void afterDomainCreation(TDomain entityDomain) {}
+    public void afterDomainCreation(TCommand input, TDomain entityDomain) {}
 
     /**
      * Hook method for processing before the database entity is saved.
@@ -157,11 +158,12 @@ public abstract class GenericCreateHandler<
      * <p>This method can be overridden by subclasses to implement logic
      * before saving the entity to the database.</p>
      *
+     * @param input The command input to be processed.
      * @param entityDatabase The database entity to be saved.
      *
      * @since 1.0.1
      */
-    public void beforeEntitySave(TDbEntity entityDatabase) {}
+    public void beforeEntitySave(TCommand input, TDbEntity entityDatabase) {}
 
     /**
      * Hook method for processing after the database entity is saved.
@@ -169,9 +171,10 @@ public abstract class GenericCreateHandler<
      * <p>This method can be overridden by subclasses to implement logic
      * after the entity is saved to the database.</p>
      *
+     * @param input The command input to be processed.
      * @param entityDatabaseCreated The saved database entity.
      *
      * @since 1.0.1
      */
-    public void afterEntitySave(TDbEntity entityDatabaseCreated) {}
+    public void afterEntitySave(TCommand input, TDbEntity entityDatabaseCreated) {}
 }

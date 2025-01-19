@@ -102,15 +102,15 @@ public abstract class GenericPutHandler<
         TDomain entityDomain = modelMapper.map(entityDatabaseExisting, domainClass);
         modelMapper.map(input, entityDomain);
 
-        afterDomainUpdate(entityDomain);
+        afterDomainUpdate(input, entityDomain);
 
         modelMapper.map(entityDomain, entityDatabaseExisting);
 
-        beforeEntityUpdate(entityDatabaseExisting);
+        beforeEntityUpdate(input, entityDatabaseExisting);
 
         TDbEntity entityDatabaseUpdated = repository.save(entityDatabaseExisting);
 
-        afterEntityUpdate(entityDatabaseUpdated);
+        afterEntityUpdate(input, entityDatabaseUpdated);
 
         return modelMapper.map(entityDatabaseUpdated, outputClass);
     }
@@ -133,11 +133,12 @@ public abstract class GenericPutHandler<
      * <p>This method can be overridden by subclasses to implement logic
      * after the domain object has been updated.</p>
      *
+     * @param input The command input to be processed.
      * @param entityDomainUpdated The updated domain entity.
      *
      * @since 1.0.1
      */
-    public void afterDomainUpdate(TDomain entityDomainUpdated) {}
+    public void afterDomainUpdate(TCommand input, TDomain entityDomainUpdated) {}
 
     /**
      * Hook method for processing before the database entity is updated.
@@ -145,11 +146,12 @@ public abstract class GenericPutHandler<
      * <p>This method can be overridden by subclasses to implement logic
      * before the database entity is updated.</p>
      *
+     * @param input The command input to be processed.
      * @param entityDatabase The entity to be updated.
      *
      * @since 1.0.1
      */
-    public void beforeEntityUpdate(TDbEntity entityDatabase) {}
+    public void beforeEntityUpdate(TCommand input, TDbEntity entityDatabase) {}
 
     /**
      * Hook method for processing after the database entity is updated.
@@ -157,9 +159,10 @@ public abstract class GenericPutHandler<
      * <p>This method can be overridden by subclasses to implement logic
      * after the database entity has been updated.</p>
      *
+     * @param input The command input to be processed.
      * @param entityDatabaseUpdated The updated database entity.
      *
      * @since 1.0.1
      */
-    public void afterEntityUpdate(TDbEntity entityDatabaseUpdated) {}
+    public void afterEntityUpdate(TCommand input, TDbEntity entityDatabaseUpdated) {}
 }
